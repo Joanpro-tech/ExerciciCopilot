@@ -1,22 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { AppApiService } from '../services/app-api.service';
 
 @Component({
   selector: 'app-character-list',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './character-list.component.html',
-  styleUrl: './character-list.component.css'
-})
-export class CharacterListComponent implements OnInit {
-   characters: any[] = [];
-
-   import { Component, OnInit } from '@angular/core';
-   import { AppApiService } from '../services/app-api.service';
-
-@Component({
-  selector: 'app-character-list',
-  templateUrl: './character-list.component.html',
-  styleUrls: ['./character-list.component.css']
+  styleUrls: ['./character-list.component.css'],
+  providers: [AppApiService]
 })
 export class CharacterListComponent implements OnInit {
   characters: any[] = [];
@@ -28,5 +21,4 @@ export class CharacterListComponent implements OnInit {
       this.characters = data.results;
     });
   }
-}
 }
