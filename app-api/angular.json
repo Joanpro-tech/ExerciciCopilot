@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/app-api",
             "index": "src/index.html",
+            "baseHref": "/ExerciciCopilot/"
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
