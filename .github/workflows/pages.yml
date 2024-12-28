@@ -27,6 +27,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Target branch for GitHub Pages
-          folder: dist/app-api  # Folder with the built Angular app
+          branch: main  # Target branch for GitHub Pages
+          folder: app-api  # Folder with the built Angular app
 
