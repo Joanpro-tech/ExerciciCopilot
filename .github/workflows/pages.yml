@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Use the Node.js version compatible with your Angular app
+          node-version: '18.19.0'  # Use the Node.js version compatible with your Angular app
 
       - name: Install Dependencies
         run: npm install
