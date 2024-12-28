@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CharacterListComponent } from '../character-list/character-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-content',
@@ -9,4 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
   standalone: true,
   styleUrl: './content.component.css'
 })
-export class ContentComponent { }
+export class ContentComponent { 
+constructor(private router: Router) { }
+
+  goToDateKeeper() {
+    this.router.navigate(['/datekeeper']);
+  }
+}
