@@ -20,15 +20,15 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: app-api  # Ensure this matches your repository structure
+      working-directory: ExeciciCopilot  # Ensure this matches your repository structure
 
     - name: Build the project
       run: npm run build -- --output-path=dist --base-href=/ExerciciCopilot/
-      working-directory: app-api  # Ensure this matches your repository structure
+      working-directory: ExeciciCopilot  # Ensure this matches your repository structure
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: /public
+        publish_dir: ./ExeciciCopilot/app-api/public
         publish_branch: gh-pages
